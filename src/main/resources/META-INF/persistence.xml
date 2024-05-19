@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+             version="2.0">
+
+    <persistence-unit name="databaseConfig"
+                      transaction-type="RESOURCE_LOCAL">
+
+        <mapping-file>META-INF/orm.xml</mapping-file>
+
+        <properties>
+            <property name="hibernate.connection.driver_class" value="org.apache.derby.jdbc.ClientDriver"/>
+            <property name="hibernate.connection.url" value="jdbc:derby://localhost:50000/homework2"/>
+
+            <property name="hibernate.show_sql" value="false" />
+            <property name="hibernate.format_sql" value="false" />
+            <property name="hibernate.hbm2ddl.auto" value="create" />
+        </properties>
+
+    </persistence-unit>
+</persistence>
